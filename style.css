@@ -1,0 +1,229 @@
+/* Variables de couleurs */
+:root {
+    --primary-color: #1a5f7a;
+    --secondary-color: #2c8c99;
+    --accent-color: #86e5ff;
+    --text-color: #333;
+    --light-bg: #f5f5f5;
+}
+
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Header et Navigation */
+header {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Sections */
+section {
+    padding: 5rem 2rem;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(26, 95, 122, 0.7), rgba(44, 140, 153, 0.7)), url('images/hero-azuralithe.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem;
+    margin-top: 60px;
+    min-height: 70vh;
+    max-height: 80vh;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Caractéristiques */
+.caracteristiques-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.caracteristique {
+    background-color: var(--light-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.caracteristique:hover {
+    transform: translateY(-5px);
+}
+
+.caracteristique-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.caracteristique-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Histoire Section */
+#histoire {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--light-bg);
+}
+
+.histoire-content {
+    flex: 1;
+}
+
+.histoire-image {
+    flex: 1;
+}
+
+.histoire-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+/* Propriétés Section */
+.proprietes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.propriete {
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.propriete-image {
+    width: 100%;
+    height: 150px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.propriete-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Placeholder pour les images */
+.placeholder-image {
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .hero {
+        min-height: 60vh;
+        max-height: 70vh;
+        padding: 4rem 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    #histoire {
+        flex-direction: column;
+    }
+
+    .caracteristique-image,
+    .propriete-image {
+        height: 150px;
+    }
+} 
